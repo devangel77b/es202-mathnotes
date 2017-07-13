@@ -1,0 +1,29 @@
+\chapter{Laplace inverse of a quadratic term}
+
+The Laplace transform notes are designed to be operational, not theoretical. On the other hand, the interested student may wonder about the origin of the complex inverse results. The following is a simple derivation of this result.
+
+Starting with the function $X(S)$, where
+\begin{equation}
+X(s) = \frac{P(s)}{(s+f)(s^2+cs+d)}\,,
+\label{eq:A1}
+\end{equation}
+factor the quadratic term
+\begin{equation*}
+s^2 + cs + d = (s+a-jb)(s+a+jb)
+\end{equation*}
+and use these factors in the partial fraction expansion: 
+\begin{equation}
+X(s) = \frac{P(s)}{(s+f)(s+a-jb)(s+a+jb)}  = \frac{A}{s+f} + \frac{B_1}{s+a-jb} + \frac{B_2}{s+a-jb}\,.
+\end{equation}
+$A$ is evaluated in the usual manner. $B_1$ can also be evaluated in the usual manner. However, since it has a complex constant in the denominator, we must make provision for $B_1$ to be complex, so let $B_1 = Be^{j\phi}$, evaluated by
+\begin{equation}
+B_1 = B e^{j\phi} = \left[ (s+a-jb) X(s) \right]_{s=-a+jb}\,.
+\end{equation}
+Substituting the last expression in for $X(s)$ gives
+\begin{equation}
+B_1 = Be^{j\phi} = \left[ \frac{(s+a-jb)P(s)}{(s+f)(s+a-jb)(s+a+jb)} \right]_{s=-a+jb} = \frac{1}{j2b} \left[\frac{P(s)}{(s+f)}\right]_{s=-a+jb}\,.
+\end{equation}
+Referring to equation~\ref{eq:A1}, define
+\begin{equation}
+Ke^{j\phi} = \left[ \frac{(s^2+cs+d)P(s)}{(s+f)(s^2+cs+d)}\right]_{s=-a+jb} = \left[\frac{P(s)}{(s+f)}\right]_{s=-a+jb}
+\end{equation}
